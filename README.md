@@ -1,0 +1,2 @@
+# terraform-module-azuread-group
+
