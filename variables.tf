@@ -33,18 +33,12 @@ variable "ad_group_owners" {
 # AD group member
 ###
 
-variable "ad_group_member_enabled" {
+variable "existing_ad_group_member_enabled" {
   description = "Boolan flag which describes whether or not to ad group member resource."
   default     = false
 }
 
-variable "ad_group_members_count" {
-  description = "The number of group members we would like add using this module."
-  type        = number
-  default     = 1
-}
-
-variable "ad_existing_group_member_object_ids" {
+variable "existing_ad_group_object_ids" {
   description = "The list of object IDs of the Azure AD Group you want to add the member to. Changing this forces a new resource to be created. If enabled value is `REQUIRED`."
   type        = list(string)
   default     = [""]
