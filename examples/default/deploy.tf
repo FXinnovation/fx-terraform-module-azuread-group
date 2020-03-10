@@ -22,6 +22,6 @@ module "example" {
   source = "../.."
 
   ad_group_names   = ["tftest${random_string.this.result}", "tftest${random_string.this.result}"]
-  ad_group_members = [["${azuread_user.example.id}"], ["${azuread_user.example1.id}"]]
+  ad_group_members = [["${azuread_user.example.object_id}"], ["${azuread_user.example1.object_id}"]]
 
 }

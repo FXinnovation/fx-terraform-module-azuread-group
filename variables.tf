@@ -35,7 +35,7 @@ variable "ad_group_owners" {
 
 variable "ad_group_member_enabled" {
   description = "Boolan flag which describes whether or not to ad group member resource."
-  default     = true
+  default     = false
 }
 
 variable "ad_group_members_count" {

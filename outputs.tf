@@ -14,12 +14,12 @@ output "ad_group_names" {
 
 output "ad_group_members" {
   description = "The members of the group."
-  value       = compact(concat(azuread_group.this.*.members, [""]))
+  value       = azuread_group.this.*.members
 }
 
 output "ad_group_owners" {
   description = "The owners of the group."
-  value       = compact(concat(azuread_group.this.*.owners, [""]))
+  value       = azuread_group.this.*.owners
 }
 
 ###
