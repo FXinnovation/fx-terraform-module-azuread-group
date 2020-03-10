@@ -44,7 +44,6 @@ variable "ad_group_members_count" {
   default     = 1
 }
 
-
 variable "ad_existing_group_member_object_ids" {
   description = "The list of object IDs of the Azure AD Group you want to add the member to. Changing this forces a new resource to be created. If enabled value is `REQUIRED`."
   type        = list(string)

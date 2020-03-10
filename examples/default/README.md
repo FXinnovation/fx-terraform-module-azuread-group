@@ -7,7 +7,7 @@
 
 | Name | Version |
 |------|---------|
-| azuread | n/a |
+| azuread | >= 0.7.0 |
 | random | n/a |
 
 ## Inputs
