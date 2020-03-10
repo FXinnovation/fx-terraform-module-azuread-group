@@ -24,6 +24,8 @@
 | Name | Description |
 |------|-------------|
 | ad\_group\_ids | n/a |
+| existing\_group\_member\_ids | n/a |
+| existing\_group\_members | n/a |
 | group\_member\_ids | n/a |
 | group\_members | n/a |
 
