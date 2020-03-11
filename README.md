@@ -14,6 +14,7 @@ See `examples` folders for usage of this module.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:-----:|
+| ad\_group\_enabled | Bollean flag whcih describes whether or not to enable the AD group. | `bool` | `false` | no |
 | ad\_group\_member\_object\_ids | The object IDs of the Azure AD object you want to add as a member to the group. Supported Object types are `Users`, `Groups` or `Service Principals`. Changing this forces a new resource to be created. NOTE: The Member object has to be present in your Azure Active Directory, either as a Member or a Guest. If enabled the vaule is `REQUIRED`. | `list(string)` | <pre>[<br>  ""<br>]</pre> | no |
 | ad\_group\_members | A set of members who should be present in this Group. Supported Object types are Users, Groups or Service Principals. NOTE: Do not use `azuread_group_member` at the same time as the `members` argument. | `list(list(string))` | <pre>[<br>  null<br>]</pre> | no |
 | ad\_group\_names | The list of names of AD groups. changing this will force to create a new resource. NOTE: Group names are not unique within Azure Active Directory. The value is `REQUIRED` | `list(string)` | <pre>[<br>  ""<br>]</pre> | no |

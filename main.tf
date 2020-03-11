@@ -3,7 +3,7 @@
 ###
 
 resource "azuread_group" "this" {
-  count = var.enabled ? length(var.ad_group_names) : 0
+  count = var.enabled && var.ad_group_enabled ? length(var.ad_group_names) : 0
 
   name    = element(var.ad_group_names, count.index)
   members = element(var.ad_group_members, count.index)
