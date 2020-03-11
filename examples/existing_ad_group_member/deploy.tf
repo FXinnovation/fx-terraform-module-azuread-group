@@ -13,7 +13,7 @@ resource "azuread_group" "example1" {
 }
 
 module "example" {
-  source = "../test/module"
+  source = "../.."
 
   ad_group_enabled = true
   ad_group_names   = ["tftest${random_string.this.result}", "tftest${random_string.this.result}"]
@@ -28,7 +28,7 @@ data "azuread_group" "example1" {
 }
 
 module "example2" {
-  source = "../test/module"
+  source = "../.."
 
   existing_ad_group_member_enabled = true
   existing_ad_group_object_ids     = ["${data.azuread_group.example.object_id}", "${data.azuread_group.example1.object_id}"]
