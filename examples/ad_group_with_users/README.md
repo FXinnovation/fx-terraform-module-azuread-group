@@ -1,4 +1,4 @@
-# Default example
+# Ad groups and AD users example
 
 - This will AD user groups and associate members to the group.
 
@@ -24,8 +24,7 @@
 | Name | Description |
 |------|-------------|
 | ad\_group\_ids | n/a |
-| existing\_group\_member\_ids | n/a |
-| existing\_group\_members | n/a |
+| ad\_user\_ids | n/a |
 | group\_member\_ids | n/a |
 | group\_members | n/a |
 

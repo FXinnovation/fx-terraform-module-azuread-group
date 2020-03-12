@@ -1,6 +1,6 @@
 # Default example
 
-- This will AD user groups and associate members to the group.
+- This will AD groups and associate members to the group.
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Providers

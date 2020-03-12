@@ -8,6 +8,57 @@ variable "enabled" {
 }
 
 ###
+# AD users
+###
+
+variable "ad_users_enabled" {
+  description = "Boolean flag whcih describes whether or not to enabled the AD user resource."
+  default     = false
+}
+
+variable "ad_user_principal_names" {
+  description = "The list of User Principal Name of the Azure AD User. "
+  type        = list(string)
+  default     = [""]
+}
+
+variable "ad_user_display_names" {
+  description = "The list of names to display in the address book for the user."
+  type        = list(string)
+  default     = [""]
+}
+
+variable "ad_users_passwords" {
+  description = "The passwords for the User. The password must satisfy minimum requirements as specified by the password policy. The maximum length is 256 characters. "
+  type        = list(string)
+  default     = [""]
+}
+
+variable "ad_user_account_enabled" {
+  description = "Boolean flag list which describes whether the user account is enabled or disabled. Default to `true`"
+  type        = list(bool)
+  default     = [true]
+}
+
+variable "ad_user_mail_nicknames" {
+  description = "The list of mail alias for the user. Defaults to the user name part of the user principal name. "
+  type        = list(string)
+  default     = [""]
+}
+
+variable "ad_user_force_password_change" {
+  description = "Boolean flag list which describes whether the user is forced to change the password during the next sign-in. Defaults to `false`."
+  type        = list(string)
+  default     = [false]
+}
+
+variable "ad_user_usage_locations" {
+  description = "The list of usage location of the User. Required for users that will be assigned licenses due to legal requirement to check for availability of services in countries. The usage location is a two letter country code (ISO standard 3166). Examples include: `NO`, `JP`, and `GB`. Cannot be reset to null once set.  "
+  type        = list(string)
+  default     = ["CA"]
+}
+
+###
 # AD group
 ###
 
@@ -34,23 +85,14 @@ variable "ad_group_owners" {
   default     = [null]
 }
 
-###
-# AD group member
-###
-
-variable "existing_ad_group_member_enabled" {
-  description = "Boolan flag which describes whether or not to ad group member resource."
-  default     = false
+variable "ad_user_start_indexes" {
+  description = "The start index of the AD user list.The start index is inclusive."
+  type        = list(number)
+  default     = [0]
 }
 
-variable "existing_ad_group_object_ids" {
-  description = "The list of object IDs of the Azure AD Group you want to add the member to. Changing this forces a new resource to be created. If enabled value is `REQUIRED`."
-  type        = list(string)
-  default     = [""]
-}
-
-variable "ad_group_member_object_ids" {
-  description = "The object IDs of the Azure AD object you want to add as a member to the group. Supported Object types are `Users`, `Groups` or `Service Principals`. Changing this forces a new resource to be created. NOTE: The Member object has to be present in your Azure Active Directory, either as a Member or a Guest. If enabled the vaule is `REQUIRED`."
-  type        = list(string)
-  default     = [""]
+variable "ad_user_end_indexes" {
+  description = "The end index of the AD user user list. The end index is exclusive."
+  type        = list(number)
+  default     = []
 }

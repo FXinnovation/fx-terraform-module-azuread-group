@@ -23,9 +23,20 @@ output "ad_group_owners" {
 }
 
 ###
-# AD group member
+# AD users
 ###
-output "ad_group_member_ids" {
-  description = "The IDs of the AD group members."
-  value       = compact(concat(azuread_group_member.this.*.id, [""]))
+
+output "ad_user_object_ids" {
+  description = "The object IDS of the users."
+  value       = compact(concat(azuread_user.this.*.object_id, [""]))
+}
+
+output "ad_user_ids" {
+  description = "The IDs of the users."
+  value       = compact(concat(azuread_user.this.*.id, [""]))
+}
+
+output "ad_user_mail" {
+  description = "The primary email address of the Azure AD user."
+  value       = compact(concat(azuread_user.this.*.mail, [""]))
 }
