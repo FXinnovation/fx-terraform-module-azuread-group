@@ -3,7 +3,7 @@
 ###
 
 resource "azuread_user" "this" {
-  count = var.ad_users_enabled ? lenght(var.ad_user_principal_names) : 0
+  count = var.ad_users_enabled ? length(var.ad_user_principal_names) : 0
 
   user_principal_name   = element(var.ad_user_principal_names, count.index)
   display_name          = element(var.ad_user_display_names, count.index)
