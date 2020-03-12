@@ -24,7 +24,7 @@
 | Name | Description |
 |------|-------------|
 | ad\_group\_ids | n/a |
-| group\_member\_ids | n/a |
 | group\_members | n/a |
+| group\_owners | n/a |
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->

@@ -5,13 +5,13 @@
 resource "azuread_user" "this" {
   count = var.ad_users_enabled ? lenght(var.ad_user_principal_names) : 0
 
-  user_principal_name    = element(var.ad_user_principal_names, count.index)
-  display_names          = element(var.ad_user_display_names, count.index)
-  password               = element(var.ad_users_passwords, count.index)
-  account_enabled        = element(var.ad_user_account_enabled, count.index)
-  mail_nickname          = element(var.ad_user_mail_nicknames, count.index)
-  force_password_changes = element(var.ad_user_force_password_change, count.index)
-  usage_location         = element(var.ad_user_usage_locations, count.index)
+  user_principal_name   = element(var.ad_user_principal_names, count.index)
+  display_name          = element(var.ad_user_display_names, count.index)
+  password              = element(var.ad_users_passwords, count.index)
+  account_enabled       = element(var.ad_user_account_enabled, count.index)
+  mail_nickname         = element(var.ad_user_mail_nicknames, count.index)
+  force_password_change = element(var.ad_user_force_password_change, count.index)
+  usage_location        = element(var.ad_user_usage_locations, count.index)
 }
 
 ###
