@@ -7,7 +7,7 @@ resource "azuread_user" "this" {
 
   user_principal_name   = element(var.ad_user_principal_names, count.index)
   display_name          = element(var.ad_user_display_names, count.index)
-  password              = element(var.ad_users_passwords, count.index)
+  password              = element(var.ad_user_passwords, count.index)
   account_enabled       = element(var.ad_user_account_enabled, count.index)
   mail_nickname         = element(var.ad_user_mail_nicknames, count.index)
   force_password_change = element(var.ad_user_force_password_change, count.index)

@@ -17,7 +17,7 @@ module "example" {
 
   ad_users_enabled        = true
   ad_user_principal_names = ["tftst${random_string.this.result}", "tftst1${random_string.this}"]
-  ad_user_diaplay_names   = ["tftestgroup1", "tftestgroup2"]
+  ad_user_display_names   = ["tftestgroup1", "tftestgroup2"]
   ad_user_passwords       = ["bobBAZCA%$!#123${random_string.this.result}"]
   ad_group_enabled        = true
   ad_group_names          = ["tftest${random_string.this.result}", "tftest${random_string.this.result}"]

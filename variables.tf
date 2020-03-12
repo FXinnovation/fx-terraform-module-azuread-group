@@ -28,7 +28,7 @@ variable "ad_user_display_names" {
   default     = [""]
 }
 
-variable "ad_users_passwords" {
+variable "ad_user_passwords" {
   description = "The passwords for the User. The password must satisfy minimum requirements as specified by the password policy. The maximum length is 256 characters. "
   type        = list(string)
   default     = [""]
