@@ -16,7 +16,7 @@ module "example" {
   source = "../.."
 
   ad_users_enabled        = true
-  ad_user_principal_names = ["tftst${random_string.this.result}@test.com", "tftst1${random_string.this.result}@test.com"]
+  ad_user_principal_names = ["tftst${random_string.this.result}@fxcicd.onmicrosoft.com", "tftst1${random_string.this.result}@fxcicd.onmicrosoft.com"]
   ad_user_display_names   = ["tftestgroup1", "tftestgroup2"]
   ad_user_passwords       = ["bobBAZCA%$!#123${random_string.this.result}"]
   ad_group_enabled        = true
