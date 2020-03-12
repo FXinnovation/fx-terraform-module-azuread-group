@@ -22,5 +22,7 @@ module "example" {
   ad_group_enabled        = true
   ad_group_names          = ["tftest${random_string.this.result}", "tftest${random_string.this.result}"]
   ad_group_members        = [["${azuread_group.example.id}"], ["${azuread_group.example1.id}"]]
+  ad_user_start_indexes   = [0, 1]
+  ad_user_end_indexes     = [1, 2]
 
 }
