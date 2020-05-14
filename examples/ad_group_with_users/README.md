@@ -3,6 +3,12 @@
 - This will AD user groups and associate members to the group.
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+## Requirements
+
+| Name | Version |
+|------|---------|
+| azuread | >= 0.7.0 |
+
 ## Providers
 
 | Name | Version |
@@ -13,7 +19,7 @@
 ## Inputs
 
 | Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:-----:|
+|------|-------------|------|---------|:--------:|
 | client\_id | n/a | `string` | n/a | yes |
 | client\_secret | n/a | `string` | n/a | yes |
 | subscription\_id | n/a | `string` | n/a | yes |
@@ -27,5 +33,6 @@
 | ad\_user\_ids | n/a |
 | group\_members | n/a |
 | group\_owners | n/a |
+| id\_map | n/a |
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->

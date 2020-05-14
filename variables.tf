@@ -70,7 +70,7 @@ variable "ad_group_enabled" {
 variable "ad_group_names" {
   description = "The list of names of AD groups. changing this will force to create a new resource. NOTE: Group names are not unique within Azure Active Directory. The value is `REQUIRED`"
   type        = list(string)
-  default     = [""]
+  default     = []
 }
 
 variable "ad_group_members" {

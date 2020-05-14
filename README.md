@@ -4,6 +4,13 @@
 See `examples` folders for usage of this module.
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+## Requirements
+
+| Name | Version |
+|------|---------|
+| terraform | >= 0.12 |
+| azuread | >= 0.7.0 |
+
 ## Providers
 
 | Name | Version |
@@ -13,10 +20,10 @@ See `examples` folders for usage of this module.
 ## Inputs
 
 | Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:-----:|
+|------|-------------|------|---------|:--------:|
 | ad\_group\_enabled | Bollean flag whcih describes whether or not to enable the AD group. | `bool` | `false` | no |
 | ad\_group\_members | A set of members who should be present in this Group. Supported Object types are Users, Groups or Service Principals. NOTE: Do not use `azuread_group_member` at the same time as the `members` argument. | `list(list(string))` | <pre>[<br>  null<br>]</pre> | no |
-| ad\_group\_names | The list of names of AD groups. changing this will force to create a new resource. NOTE: Group names are not unique within Azure Active Directory. The value is `REQUIRED` | `list(string)` | <pre>[<br>  ""<br>]</pre> | no |
+| ad\_group\_names | The list of names of AD groups. changing this will force to create a new resource. NOTE: Group names are not unique within Azure Active Directory. The value is `REQUIRED` | `list(string)` | `[]` | no |
 | ad\_group\_owners | A set of owners who own this Group. Supported Object types are Users or Service Principals. NOTE: Do not use `azuread_group_owner` at the same time as the `owners` argument. | `list(list(string))` | <pre>[<br>  null<br>]</pre> | no |
 | ad\_user\_account\_enabled | Boolean flag list which describes whether the user account is enabled or disabled. Default to `true` | `list(bool)` | <pre>[<br>  true<br>]</pre> | no |
 | ad\_user\_display\_names | The list of names to display in the address book for the user. | `list(string)` | <pre>[<br>  ""<br>]</pre> | no |
@@ -41,5 +48,6 @@ See `examples` folders for usage of this module.
 | ad\_user\_ids | The IDs of the users. |
 | ad\_user\_mail | The primary email address of the Azure AD user. |
 | ad\_user\_object\_ids | The object IDS of the users. |
+| group\_id\_map | The map of group name and their IDs. |
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->

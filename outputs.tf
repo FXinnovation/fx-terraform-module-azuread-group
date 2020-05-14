@@ -12,6 +12,11 @@ output "ad_group_names" {
   value       = compact(concat(azuread_group.this.*.name, [""]))
 }
 
+output "group_id_map" {
+  description = "The map of group name and their IDs."
+  value       = zipmap(var.ad_group_names, compact(concat(azuread_group.this.*.id, [""])))
+}
+
 output "ad_group_members" {
   description = "The members of the group."
   value       = azuread_group.this.*.members
